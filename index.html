@@ -9,7 +9,8 @@
 
      <style>
      body{
-       background-color: #121212;
+       background-color: #1a1a1a;
+
 
      }
 
@@ -49,7 +50,6 @@
 
      .work{
        width:600px;
-
        margin-top: 650px;
        position: absolute;
        line-height: 1.5em;
@@ -61,19 +61,50 @@
      }
      .links{
        text-decoration: none;
-       position: absolute;
        word-spacing: -0.07em;
        display: inline;
        font-family:'Lekton', sans-serif;
-       font-size: 20px;
+       font-size: 14px;
        color: #ffffff;
      }
 
      .links:hover{
-       color: #ed1845;
+       color: #ff4d00;
        text-decoration: none;
 
      }
+
+     table, td, th {
+        border: 0.5px solid #474747;
+        font-family:'Lekton', sans-serif;
+        color: #ffffff;
+        padding-left: 10px;
+      }
+
+     table {
+
+        border-collapse: collapse;
+        width:600px;
+        position: absolute;
+        margin-top: 650px;
+      }
+
+      th {
+        font-size: 14px;
+        height: 30px;
+      }
+
+      td{
+        font-size: 14px;
+        height: 30px;
+      }
+
+      .container{
+        position: relative;
+        display: flex;
+        margin-left: 150px;
+      }
+
      </style>
 
 
@@ -83,11 +114,11 @@
    <body>
 
     <div class="container">
-      <!-- <div class="jumbotron"> -->
+
          <div class="intro">Batool Akbar
            <a style="float:right;
            text-decoration: none;
-           color: #ed1845;
+           color: #ff4d00;
            font-weight: 400;
 
             " href="Batool_Akbar.pdf" download>Resume</a>
@@ -98,13 +129,36 @@
             <br><span style="font-size:20px; color: #c9c9c9">If you have any questions please email me at batool.s.ak@gmail.com</span>
         </div>
 
-        <div class="work">
-        1. <a class="links" href="https://bsakbar.github.io/thesis/web/home.html">Medigon. Your blood, your data</a> <br>
-        2. <a class="links" href="https://bsakbar.github.io/major-studio-1/Final%20assignment/Final_Project.html">Quality Education in Africa</a> <br>
-        3. <a class="links" href="https://bsakbar.github.io/dvia_2018/mapping_space/">Earthquakes in North America | Map exercise</a> <br>
-        4. <a class="links" href="https://bsakbar.github.io/dvia_2018/mapping_quantities/Final_Mapping_Quantities.html">Nuclear Testing Timeline</a> <br>
-        </div>
-      <!-- </div> -->
+      <table>
+
+        <tr>
+          <th>Project</th>
+          <th>Type</th>
+        </tr>
+
+        <tr>
+          <td> <a class="links" href="https://github.com/bsakbar/thesis/tree/master/documentation">Medigon. Your blood, your data</a></td>
+          <td>Interface</td>
+        </tr>
+
+        <tr>
+          <td><a class="links" href="https://github.com/bsakbar/major-studio-1/tree/master/Final%20assignment">Quality Education in Africa</a></td>
+          <td>Dashboard</td>
+        </tr>
+
+        <tr>
+          <td><a class="links" href="https://bsakbar.github.io/dvia_2018/mapping_space/">Earthquakes in North America</a></td>
+          <td>Map</td>
+        </tr>
+
+        <tr>
+          <td><a class="links" href="https://github.com/bsakbar/dvia_2018/tree/master/mapping_quantities">Nuclear Testing Timeline</a></td>
+          <td>Poster</td>
+        </tr>
+
+      </table>
+
+
 
     </div>
 
