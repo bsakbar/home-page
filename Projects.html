@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+     <link rel="icon" href="assets/tabIcon.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap" rel="stylesheet">
+     <style>
+
+     body{
+       background-color: #777777;
+       overflow-x: hidden;
+     }
+
+     .nameLogo{
+       width:400px;
+       margin-top: 150px;
+       line-height: 0.7em;
+       position: absolute;
+       letter-spacing: -0.08em;
+       display:block;
+       font-family: 'Roboto Mono', monospace;
+       font-size: 60px;
+       font-weight: 400;
+       color: #ff5122;
+       width:
+     }
+
+     .txtbox{
+       width:700px;
+       margin-top: 400px;
+       position: absolute;
+       line-height: 1.5em;
+       /* word-spacing: -0.09em; */
+       /* letter-spacing: -0.07em; */
+       display:block;
+       /* font-family: 'Roboto Mono', monospace; */
+       font-family:'Quicksand', sans-serif;
+       font-weight: 200;
+       font-size: 22px;
+       color: #000000;
+     }
+
+     .title{
+       width:300px;
+       margin-top: 780px;
+       position: absolute;
+       line-height: 1.3em;
+       word-spacing: -0.09em;
+       letter-spacing: -0.07em;
+       display: block;
+       font-family: 'Roboto Mono', monospace;
+       font-weight: 300;
+       font-size: 22px;
+       color: #ff5122;
+     }
+
+     .workTitle{
+       margin-top: 0px;
+       margin-left: 5px;
+       position: absolute;
+       line-height: 1.5em;
+       word-spacing: -0.09em;
+       letter-spacing: -0.07em;
+       display:block;
+       font-family: 'Roboto Mono', monospace;
+       font-weight: 300;
+       font-size: 18px;
+       color: #000000;
+     }
+
+
+
+      .container{
+        position: relative;
+        display: flex;
+        margin-left: 240px;
+      }
+
+
+      .highlight{
+        background: #9c9c9c;
+        position: relative;
+        display: inline-block;
+        height: 28px;
+        width:max-content;
+        vertical-align:inherit;
+
+      }
+
+      .nav{
+        font-family:'Quicksand', sans-serif;
+        text-decoration: none;
+        color: #000000;
+        font-weight: 300;
+        display: inline-block;
+      }
+
+      .nav:hover{
+        text-decoration: none;
+        border-bottom: 1px solid #000000;
+        color: #000000;
+      }
+/*
+     #nav{
+       width:max-content ;
+       margin-top: 830px;
+       position: fixed;
+       word-spacing: -0.04em;
+       display:flex;
+       font-family: 'Roboto Mono', monospace;
+       z-index: +2;
+     } */
+
+     .cards{
+       margin-top: 100px;
+       background: transparent;
+       border: 1px solid #000;
+       height:370px;
+       width:370px;
+       display: block;
+     }
+
+     .tags{
+       margin-top: 370px;
+       margin-left: 0px;
+       font-family: 'Roboto Mono', monospace;
+       font-size: 12px;
+       font-weight: 300;
+       color:#000000;
+
+     }
+
+     .tagHighlight{
+       padding-left:2px;
+       padding-right: 2px;
+       background: transparent;
+       border: 1px solid #000;
+       position: relative;
+       display: inline-block;
+       width:max-content;
+       text-align: center;
+      vertical-align: middle;
+      line-height: 20px;
+       height:20px;
+
+     }
+
+     .cardsContainer{
+       height: 600px;
+       position: absolute;
+       display: flex;
+       margin-top: 200px;
+       /* overflow: scroll;
+       overflow-x: hidden; */
+
+     }
+
+     .cardsContainer::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+
+      }
+      .cardsContainer::-webkit-scrollbar-thumb {
+        background: transparent;
+
+      }
+      .cardsContainer::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      img{
+        display: flex;
+        position: absolute;
+        z-index: -1;
+
+      }
+
+      .clear_btn{
+        position:absolute;
+        z-index:2;
+        outline:none;
+        -webkit-box-shadow: 0px 0px 0px;
+        box-shadow: 0px 0px 0px;
+        background-color: transparent;
+        border: none;
+       -webkit-appearance: none;
+        cursor: pointer;
+        width: 370px;
+        height:340px;
+        margin-top: 28px;
+
+      }
+
+      .intro{
+        width:300px;
+        margin-top: 230px;
+        position: absolute;
+        word-spacing: -0.04em;
+        display:flex;
+        font-family: 'Roboto Mono', monospace;
+      }
+
+
+     </style>
+
+
+      <title>Work</title>
+   </head>
+   <body>
+
+    <div class="container">
+
+      <div class="nameLogo">
+          batool<br>akbar
+      </div>
+
+
+
+
+      <!-- small red square -->
+              <div style="background: #ff5122;
+              height: 7px;
+              width: 7px;
+              margin-top: 230px;
+              margin-left: 172px;
+              "></div>
+
+
+
+
+<!-- black line -->
+        <div style="
+        border-bottom: 1px solid #000;
+        margin-left: -325px;
+        margin-top:418px;
+        width: 290px;
+        position: fixed;
+        "></div>
+
+        <div class="title">
+          Projects
+        </div>
+
+        <div class="txtbox">
+          I'm a <span class="highlight">data visualization</span> designer and engineer based in NYC.
+          <div>I bring together <span class="highlight">UX design</span>, 
+            <span class="highlight">UI design</span>, and <span class="highlight">web development</span> <br>to solve data communication problems.<br>
+            <br>
+            Contact me at batool.s.ak@gmail.com | Preview my <a class="nav" href="Batool_Akbar.pdf" target="_blank">Resume</a>.
+        </div>
+
+
+
+    <div class="cardsContainer">
+
+        <div class="cards">
+          <input class="clear_btn" type="button" id="medBtn"></input>
+
+            <span class="workTitle">Medigon</span>
+            <div style="
+            border-bottom: 1px solid #000;
+            margin-top:27px;
+            width: 369px;
+            position: absolute;
+            "></div>
+
+            <input style="width:20px; height:20px; margin-left:343px;margin-top:5px;" class="clear_btn" type="button" id="med_video"></input>
+            <input style="width:20px; height:20px; margin-left:318px;margin-top:5px;" class="clear_btn" type="button" id="med_GH"></input>
+            <img style="width:18px; margin-left:343px;margin-top:8px;" src="assets/video_icon.png">
+            <img style="width:17px; margin-left:318px;margin-top:5px;" src="assets/GitHub.png" >
+            <img style="width: 370px; margin-top:27px; margin-left:-1px;" src="assets/medigon_web.png">
+
+              <div class="tags">
+                <text class="tagHighlight">Interface</text>&ensp;<text class="tagHighlight">Medicine</text>
+                <text class="tagHighlight">Polygons</text>&ensp;<text class="tagHighlight">Blood Tests</text>
+              </div>
+
+
+        </div>
+
+        <div style="margin-left:30px;" class="cards">
+          <input class="clear_btn" type="button" id="unBtn"></input>
+
+            <span class="workTitle">Quality Education</span>
+            <div style="
+            border-bottom: 1px solid #000;
+            margin-top:27px;
+            width: 369px;
+            position: absolute;
+            "></div>
+
+            <input style="width:20px; height:20px; margin-left:343px;margin-top:5px;" class="clear_btn" type="button" id="un_video"></input>
+            <img style="width:18px; margin-left:343px;margin-top:8px;" src="assets/video_icon.png" >
+              <img style="width: 370px; margin-top:46px; margin-left:-1px;" src="assets/un_web.png">
+
+            <div class="tags">
+              <text class="tagHighlight">Dashboard</text>&ensp;<text class="tagHighlight">Africa</text>
+              <text class="tagHighlight">Education</text>&ensp;<text class="tagHighlight">Energy</text>
+            </div>
+        </div>
+
+        <div style="margin-left:30px;" class="cards">
+          <input class="clear_btn" type="button" id="eqBtn"></input>
+
+            <span class="workTitle">Earthquakes in North America</span>
+            <div style="
+            border-bottom: 1px solid #000;
+            margin-top:27px;
+            width: 369px;
+            position: absolute;
+            "></div>
+
+            <img style="width: 370px; margin-top:27px;" src="assets/eq_web.png">
+
+            <div class="tags">
+              <text class="tagHighlight">Maps</text>&ensp;<text class="tagHighlight">Earthquakes</text>
+              <text class="tagHighlight">Magnitude</text>&ensp;<text class="tagHighlight">Depth</text>
+            </div>
+        </div>
+
+        <div style="margin-top:565px;margin-left:-1170px;" class="cards">
+          <input class="clear_btn" type="button" id="ntBtn"></input>
+
+            <span class="workTitle">Mapping Quantity</span>
+            <div style="
+            border-bottom: 1px solid #000;
+            margin-top:27px;
+            width: 369px;
+            position: absolute;
+            "></div>
+
+            <img style="width: 370px; margin-top:27px;" src="assets/nt_web.png">
+
+              <div class="tags">
+                <text class="tagHighlight">Poster</text>&ensp;<text class="tagHighlight">Nuclear</text>
+                <text class="tagHighlight">Timeline</text>
+              </div>
+        </div>
+
+        <div style="margin-left:30px; margin-top:565px;" class="cards">
+            <input class="clear_btn" type="button" id="timeBtn"></input>
+            <span class="workTitle">"Show" Me the Time</span>
+            <div style="
+            border-bottom: 1px solid #000;
+            margin-top:27px;
+            width: 369px;
+            position: absolute;
+            "></div>
+
+              <img style="width: 330px; margin-top:45px; margin-left:17px;" src="assets/mapping_time.gif">
+
+            <div class="tags">
+              <text class="tagHighlight">Time</text>&ensp;<text class="tagHighlight">Clock</text>
+              <text class="tagHighlight">Calendar</text>
+            </div>
+        </div>
+
+        <div style="margin-left:30px; margin-top:565px;" class="cards">
+          <input class="clear_btn" type="button" id="aurBtn"></input>
+            <span class="workTitle">Aurora</span>
+            <div style="
+            border-bottom: 1px solid #000;
+            margin-top:27px;
+            width: 369px;
+            position: absolute;
+            "></div>
+
+            <img style="width: 370px; margin-top:27px; margin-left:0px;" src="assets/aur_web.png">
+
+            <div class="tags">
+              <text class="tagHighlight">Databases</text>&ensp;<text class="tagHighlight">Sensor</text>
+              <text class="tagHighlight">Photocell</text>&ensp;<text class="tagHighlight">Transistor</text>
+            </div>
+        </div>
+        <br>
+        <div style="margin-top:1100px;
+        width:500px;
+        position: absolute;
+        word-spacing: -0.09em;
+        letter-spacing: -0.07em;
+        display: flex;
+        font-family: 'Roboto Mono', monospace;
+        font-weight: 200;
+        font-size: 22px;
+        color: #000000;
+        padding-bottom: 100px;
+        ">More work will be posted soon..</div>
+
+    </div>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script text/javascript>
+
+document.getElementById("medBtn").onclick = function () {
+        location.href = "medigon.html";
+    };
+
+document.getElementById("unBtn").onclick = function () {
+        location.href = "https://github.com/bsakbar/major-studio-1/tree/master/Final%20assignment";
+    };
+
+document.getElementById("eqBtn").onclick = function () {
+        location.href = "https://bsakbar.github.io/dvia_2018/mapping_space/";
+    };
+
+document.getElementById("timeBtn").onclick = function () {
+        location.href = "https://bsakbar.github.io/dvia_2018/mapping_time/variants/large/index.html";
+    };
+
+document.getElementById("aurBtn").onclick = function () {
+        location.href = "https://github.com/bsakbar/data-structures/tree/master/Final_Assignments";
+    };
+
+document.getElementById("ntBtn").onclick = function () {
+        location.href = "https://github.com/bsakbar/dvia_2018/tree/master/mapping_quantities";
+    };
+
+document.getElementById("med_video").onclick = function () {
+        location.href = "https://vimeo.com/337975236";
+    };
+
+document.getElementById("med_GH").onclick = function () {
+        location.href = "https://github.com/bsakbar/thesis/tree/master/documentation";
+};
+
+document.getElementById("un_video").onclick = function () {
+        location.href = "https://vimeo.com/344951653";
+    };
+
+
+
+
+
+
+</script>
+   </body>
+</html>
