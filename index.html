@@ -54,7 +54,7 @@
        display: block;
        font-family: 'Roboto Mono', monospace;
        font-weight: 300;
-       font-size: 22px;
+       font-size: 20px;
        color: #ff5122;
      }
 
@@ -92,20 +92,29 @@
       }
 
       .nav{
-        font-family:'Quicksand', sans-serif;
+        /* font-family:'Quicksand', sans-serif; */
+        font-family: 'Roboto Mono', monospace;
         text-decoration: none;
         color: #000000;
-        font-weight: 300;
-        display: inline-block;
+        font-weight: 200;
+        display: flex;
+        position: absolute;
+        margin-left: 1100px;
+        margin-top: 150px;
+        word-spacing: -0.09em;
+        letter-spacing: -0.07em;
+        font-size: 20px;
+
       }
 
       .nav:hover{
         text-decoration: none;
-        border-bottom: 1px solid #000000;
-        color: #000000;
+        /* border-bottom: 1px solid #ff5122; */
+        color: #ff5122;
+        font-weight: 300;
       }
-/*
-     #nav{
+
+     /* #nav{
        width:max-content ;
        margin-top: 830px;
        position: fixed;
@@ -218,18 +227,13 @@
           batool<br>akbar
       </div>
 
-
-
-
-      <!-- small red square -->
-              <div style="background: #ff5122;
-              height: 7px;
-              width: 7px;
-              margin-top: 230px;
-              margin-left: 172px;
-              "></div>
-
-
+<!-- small red square -->
+        <div style="background: #ff5122;
+        height: 7px;
+        width: 7px;
+        margin-top: 230px;
+        margin-left: 172px;
+        "></div>
 
 
 <!-- black line -->
@@ -241,6 +245,8 @@
         position: fixed;
         "></div>
 
+        <a class="nav" href="Batool_Akbar.pdf" target="_blank">Resume</a>.
+
         <div class="title">
           Projects
         </div>
@@ -250,7 +256,7 @@
           <div>I bring together <span class="highlight">UX design</span>, 
             <span class="highlight">UI design</span>, and <span class="highlight">web development</span> <br>to solve data communication problems.<br>
             <br>
-            Contact me at batool.s.ak@gmail.com | Preview my <a class="nav" href="Batool_Akbar.pdf" target="_blank">Resume</a>.
+            Contact me at batool.s.ak@gmail.com
         </div>
 
 
@@ -361,7 +367,7 @@
 
         <div style="margin-left:30px; margin-top:565px;" class="cards">
           <input class="clear_btn" type="button" id="aurBtn"></input>
-            <span class="workTitle">Aurora</span>
+            <span class="workTitle">Light as Data</span>
             <div style="
             border-bottom: 1px solid #000;
             margin-top:27px;
@@ -403,7 +409,7 @@
 <script text/javascript>
 
 document.getElementById("medBtn").onclick = function () {
-        location.href = "https://github.com/bsakbar/thesis/tree/master/documentation";
+        location.href = "medigon.html";
     };
 
 document.getElementById("unBtn").onclick = function () {
