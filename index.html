@@ -12,7 +12,13 @@
 
      body{
        background-color: #777777;
+       margin: 0px;
        overflow-x: hidden;
+     }
+
+     canvas {
+      display: block;
+      vertical-align: bottom;
      }
 
      .nameLogo{
@@ -30,8 +36,8 @@
      }
 
      .txtbox{
-       width:700px;
-       margin-top: 400px;
+       width:800px;
+       margin-top: 150px;
        position: absolute;
        line-height: 1.5em;
        /* word-spacing: -0.09em; */
@@ -40,13 +46,13 @@
        /* font-family: 'Roboto Mono', monospace; */
        font-family:'Quicksand', sans-serif;
        font-weight: 200;
-       font-size: 22px;
+       font-size: 20px;
        color: #000000;
      }
 
      .title{
        width:300px;
-       margin-top: 780px;
+       margin-top: 390px;
        position: absolute;
        line-height: 1.3em;
        word-spacing: -0.09em;
@@ -75,13 +81,13 @@
 
 
       .container{
-        position: relative;
+        position: absolute;
         display: flex;
         margin-left: 240px;
       }
 
 
-      .highlight{
+      /* .highlight{
         background: #9c9c9c;
         position: relative;
         display: inline-block;
@@ -89,14 +95,14 @@
         width:max-content;
         vertical-align:inherit;
 
-      }
+      } */
 
       .nav{
         /* font-family:'Quicksand', sans-serif; */
         font-family: 'Roboto Mono', monospace;
         text-decoration: none;
         color: #000000;
-        font-weight: 200;
+        font-weight: 300;
         display: flex;
         position: absolute;
         margin-left: 1100px;
@@ -125,7 +131,7 @@
      } */
 
      .cards{
-       margin-top: 100px;
+       margin-top: 200px;
        background: transparent;
        border: 1px solid #000;
        height:370px;
@@ -134,7 +140,7 @@
      }
 
      .tags{
-       margin-top: 370px;
+       margin-top: 380px;
        margin-left: 0px;
        font-family: 'Roboto Mono', monospace;
        font-size: 12px;
@@ -162,7 +168,7 @@
        height: 600px;
        position: absolute;
        display: flex;
-       margin-top: 200px;
+       margin-top: 250px;
        /* overflow: scroll;
        overflow-x: hidden; */
 
@@ -213,6 +219,18 @@
         font-family: 'Roboto Mono', monospace;
       }
 
+      #particles-js {
+
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       /* background-color: #ffffff; */
+       background-image: url("");
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: 50% 50%;
+    }
+
 
      </style>
 
@@ -221,29 +239,31 @@
    </head>
    <body>
 
+   <div id="particles-js"></div>
+
     <div class="container">
 
-      <div class="nameLogo">
+      <!-- <div class="nameLogo">
           batool<br>akbar
-      </div>
+      </div> -->
 
 <!-- small red square -->
-        <div style="background: #ff5122;
+        <!-- <div style="background: #ff5122;
         height: 7px;
         width: 7px;
         margin-top: 230px;
         margin-left: 172px;
-        "></div>
+        "></div> -->
 
 
 <!-- black line -->
-        <div style="
+        <!-- <div style="
         border-bottom: 1px solid #000;
         margin-left: -325px;
         margin-top:418px;
         width: 290px;
         position: fixed;
-        "></div>
+        "></div> -->
 
         <a class="nav" href="Batool_Akbar.pdf" target="_blank">Resume</a>
 
@@ -253,10 +273,10 @@
 
         <div class="txtbox">
           I'm a <span class="highlight">data visualization</span> designer and engineer based in NYC.
-          <div>I bring together <span class="highlight">UX design</span>, 
-            <span class="highlight">UI design</span>, and <span class="highlight">web development</span> <br>to solve data communication problems.<br>
+          I bring together UX design, UI design, and web development to solve data communication problems.
             <br>
-            Contact me at batool.s.ak@gmail.com
+            <br>
+          Contact me at batool.s.ak@gmail.com
         </div>
 
 
@@ -328,7 +348,7 @@
             </div>
         </div>
 
-        <div style="margin-top:565px;margin-left:-1170px;" class="cards">
+        <div style="margin-top:660px;margin-left:-1170px;" class="cards">
           <input class="clear_btn" type="button" id="ntBtn"></input>
 
             <span class="workTitle">Mapping Quantity</span>
@@ -347,7 +367,7 @@
               </div>
         </div>
 
-        <div style="margin-left:30px; margin-top:565px;" class="cards">
+        <div style="margin-left:30px; margin-top:660px;" class="cards">
             <input class="clear_btn" type="button" id="timeBtn"></input>
             <span class="workTitle">"Show" Me the Time</span>
             <div style="
@@ -365,7 +385,7 @@
             </div>
         </div>
 
-        <div style="margin-left:30px; margin-top:565px;" class="cards">
+        <div style="margin-left:30px; margin-top:660px;" class="cards">
           <input class="clear_btn" type="button" id="aurBtn"></input>
             <span class="workTitle">Light Sensor</span>
             <div style="
@@ -383,7 +403,7 @@
             </div>
         </div>
         <br>
-        <div style="margin-top:1100px;
+        <div style="margin-top:1200px;
         width:500px;
         position: absolute;
         word-spacing: -0.09em;
@@ -403,9 +423,14 @@
 
 
 
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="particles.js"></script>
+
+
 <script text/javascript>
 
 document.getElementById("medBtn").onclick = function () {
@@ -422,7 +447,7 @@ document.getElementById("eqBtn").onclick = function () {
     };
 
 document.getElementById("timeBtn").onclick = function () {
-        location.href = "mapping_time.html";
+        location.href = "mapping_time";
     };
 
 document.getElementById("aurBtn").onclick = function () {
@@ -447,9 +472,141 @@ document.getElementById("un_video").onclick = function () {
 
 
 
+//particlesJS
+// particlesJS: https://github.com/VincentGarreau/particles.js/
+
+
+particlesJS({
+  "particles": {
+    "number": {
+      "value": 400,
+      "density": {
+        "enable": true,
+        "value_area": 9000
+      }
+    },
+    "color": {
+      "value": "#ff5122"
+    },
+    "shape": {
+      "type": "edge",
+      "stroke": {
+        "width": 0,
+        "color": "#ff5122"
+      },
+
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 3,
+        "opacity_min": 0.5,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 15,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#bfbfbf",
+      "opacity": 1,
+      "width": 0
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 600
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": .3
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+  });
+
+
+
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+};
+requestAnimationFrame(update);;
+
+
+
 
 
 
 </script>
+
+
    </body>
 </html>
