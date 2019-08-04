@@ -1,3 +1,8 @@
+<!-- particlesJS
+particlesJS: https://github.com/VincentGarreau/particles.js/
+ -->
+
+
 <!doctype html>
 <html lang="en">
    <head>
@@ -23,13 +28,14 @@
 
      .nameLogo{
        width:400px;
-       margin-top: 150px;
+       margin-top: 100px;
        line-height: 0.7em;
        position: absolute;
-       letter-spacing: -0.08em;
+       letter-spacing: -0.13em;
+       word-spacing: -0.3em;
        display:block;
        font-family: 'Roboto Mono', monospace;
-       font-size: 60px;
+       font-size: 40px;
        font-weight: 400;
        color: #ff5122;
        width:
@@ -37,22 +43,23 @@
 
      .txtbox{
        width:800px;
-       margin-top: 150px;
+       margin-top: 220px;
        position: absolute;
-       line-height: 1.5em;
-       /* word-spacing: -0.09em; */
-       /* letter-spacing: -0.07em; */
+       line-height: 1.3em;
+       word-spacing: -0.05em;
+       letter-spacing: -0.01em;
        display:block;
        /* font-family: 'Roboto Mono', monospace; */
        font-family:'Quicksand', sans-serif;
        font-weight: 200;
        font-size: 20px;
        color: #000000;
+       z-index: -1;
      }
 
      .title{
        width:300px;
-       margin-top: 390px;
+       margin-top: 425px;
        position: absolute;
        line-height: 1.3em;
        word-spacing: -0.09em;
@@ -102,11 +109,11 @@
         font-family: 'Roboto Mono', monospace;
         text-decoration: none;
         color: #000000;
-        font-weight: 300;
+        font-weight: 200;
         display: flex;
         position: absolute;
         margin-left: 1100px;
-        margin-top: 150px;
+        margin-top: 220px;
         word-spacing: -0.09em;
         letter-spacing: -0.07em;
         font-size: 20px;
@@ -168,7 +175,7 @@
        height: 600px;
        position: absolute;
        display: flex;
-       margin-top: 250px;
+       margin-top: 280px;
        /* overflow: scroll;
        overflow-x: hidden; */
 
@@ -243,9 +250,9 @@
 
     <div class="container">
 
-      <!-- <div class="nameLogo">
-          batool<br>akbar
-      </div> -->
+      <div class="nameLogo">
+          batool akbar
+      </div>
 
 <!-- small red square -->
         <!-- <div style="background: #ff5122;
@@ -273,7 +280,7 @@
 
         <div class="txtbox">
           I'm a <span class="highlight">data visualization</span> designer and engineer based in NYC.
-          I bring together UX design, UI design, and web development to solve data communication problems.
+          I bring together UX design, <br>UI design, and web development to solve data communication problems.
             <br>
             <br>
           Contact me at batool.s.ak@gmail.com
@@ -479,10 +486,10 @@ document.getElementById("un_video").onclick = function () {
 particlesJS({
   "particles": {
     "number": {
-      "value": 400,
+      "value": 500,
       "density": {
         "enable": true,
-        "value_area": 9000
+        "value_area": 8700
       }
     },
     "color": {
@@ -518,8 +525,8 @@ particlesJS({
     },
     "line_linked": {
       "enable": true,
-      "distance": 150,
-      "color": "#bfbfbf",
+      "distance": 120,
+      "color": "#b1b1b1",
       "opacity": 1,
       "width": 0
     },
@@ -553,9 +560,9 @@ particlesJS({
     },
     "modes": {
       "grab": {
-        "distance": 400,
+        "distance": 300,
         "line_linked": {
-          "opacity": .3
+          "opacity": .5
         }
       },
       "bubble": {
