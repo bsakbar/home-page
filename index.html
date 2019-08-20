@@ -79,9 +79,10 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
        line-height: 1.5em;
        word-spacing: -0.08em;
        letter-spacing: -0.02em;
-       display:block;
+       display: block;
        /* font-family:'Quicksand', sans-serif; */
        font-family: 'Roboto Mono', monospace;
+       width: 300px;
        font-weight: 300;
        font-size: 18px;
        color: #000;
@@ -419,7 +420,7 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
             position: absolute;
             "></div>
 
-            <img style="width: 370px; margin-top:27px; margin-left:0px;" src="assets/ls_new.png">
+            <img style="width: 370px; margin-top:24px; margin-left:-3px;" src="assets/ls_new.png">
 
             <div class="tags">
               <text class="tagHighlight">Databases</text>&ensp;<text class="tagHighlight">Sensor</text>
@@ -428,7 +429,27 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
         </div>
 
 
-        <div style="margin-top:1200px;
+        <div style="margin-top:1120px;margin-left:-1170px;" class="cards">
+          <input class="clear_btn" type="button" id="ddBtn"></input>
+
+            <span class="workTitle">Dear Diary</span>
+            <div style="
+            border-bottom: 2px solid #000;
+            margin-top:27px;
+            width: 368px;
+            position: absolute;
+            "></div>
+
+            <img style="width: 370px; margin-left:-5px; margin-top:27px;" src="assets/dd_web.png">
+
+              <div class="tags">
+                <text class="tagHighlight">Databases</text>&ensp;<text class="tagHighlight">Colors</text>
+                <text class="tagHighlight">Diary</text>&ensp;<text class="tagHighlight">P5js</text>
+              </div>
+        </div>
+
+
+        <div style="margin-top:1600px;
         width:500px;
         position: absolute;
         word-spacing: -0.09em;
@@ -492,6 +513,10 @@ document.getElementById("med_GH").onclick = function () {
 
 document.getElementById("un_video").onclick = function () {
         location.href = "https://vimeo.com/344951653";
+    };
+
+document.getElementById("ddBtn").onclick = function () {
+        location.href = "https://github.com/bsakbar/data-structures/tree/master/Final_Assignments/Dear_Diary";
     };
 
 
