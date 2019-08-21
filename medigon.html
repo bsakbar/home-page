@@ -29,8 +29,9 @@
          display: block;
          position: absolute;
          float: right;
-         letter-spacing: -0.08em;
-         font-family: 'Roboto Mono', monospace;
+         letter-spacing: -0.02em;
+         /* font-family: 'Roboto Mono', monospace; */
+         font-family: 'Quicksand', sans-serif;
          font-size: 20px;
          font-weight: 200;
          color: #000000;
@@ -47,7 +48,7 @@
 
      .txtbox{
        width:1150px;
-       margin-top: 600px;
+       margin-top: 800px;
        position: absolute;
        line-height: 2em;
        /* word-spacing: -0.09em; */
@@ -143,7 +144,7 @@
 
      table {
         border-collapse: collapse;
-        width:800px;
+        width:1150px;
         position: relative;
         margin-top: 0px;
       }
@@ -219,7 +220,7 @@
         position: fixed;
         "></div> -->
 
-        <img style="margin-top:280px;margin-left:150px;; width:800px; height:229.078px;" src="assets/polygons.png">
+        <img style="margin-top:370px;margin-left:150px;; width:800px; height:229.078px;" src="assets/polygons.png">
 
         <div class="txtbox">
           Blood is a fascinating component of the human body. With only a few drops of blood, we can learn a lot about the conditions of our bodies.
@@ -253,6 +254,8 @@
               <br>
               <br>
 
+            <img style="margin-left: 50px; width: 430px; margin-top:0px;" src="assets/bloodCircle5.gif">
+
 
               </div>
 
@@ -270,7 +273,8 @@
           <br>
           <br>
 
-          <div style="margin-top:100px;">Datasets</div>
+          <div class="headlines" style="margin-top:100px;">Datasets</div>
+
           <br>
 
 
@@ -532,7 +536,9 @@
 
               <br>
 
-          <div style="margin-top:100px;">I like to hand-sketch my ideas before I create wireframes, so I sketched few ways to visualize blood test results</div>
+            <div class="headlines" style="margin-top:100px;">Sketches</div>
+
+          <div style="margin-top:50px;">I like to hand-sketch my ideas before I create wireframes, so I sketched few ways to visualize blood test results</div>
 
           <img style="margin-top:100px;margin-left:0px; width:450px;" src="assets/medigon_sketch1.jpg">
           <img style="margin-top:-245px;margin-left:40px; width:460px;" src="assets/medigon_sketch3.jpg">
@@ -543,8 +549,8 @@
 
           <div class="headlines" style="margin-top:100px;">Wireframes</div>
           <br>
-          Wireframes were an important step in the process to study the structure of the interface. Below are few examples of<br>
-          the first wireframes.
+          Wireframes were an important step in the process to study the structure of the interface. Below is an example of
+          a wireframe.
           <br>
           <br>
           <span style="font-size:18px;
@@ -577,11 +583,34 @@
 
           <br>
 
-          <div style="margin-top: 700px;">...
 
+        <div class="headlines" style="margin-top: 700px;">Graphs</div>
+          <div style="margin-top: 50px; ">
 
+            Each blood component contains multiple blood elements, each element has a different range and unit. Normalizing the values is important to fit all the elements in one visualization.
+            Therefore, I assigned every blood component (e.g.,Complete Blood Count) to a polygon. CBC contains 9 elements so it's represented in a nonagon.
+
+            <br>
+            <img style="display:absolute; margin-left:0px; width: 430px; margin-top:60px;" src="assets/normProcess.gif">
+
+            <img style="display:absolute; margin-left:150px; width: 430px; margin-top:0px;" src="assets/polygons.gif">
+
+            <br>
+            </div>
+
+            <div class="headlines" style="margin-top:150px;">Normalization</div>
+          <div style="margin-top: 50px; ">
+            Normalization is the process of converting irregular values to more standardized values by using simple math equations.
+
+            <img style="display:absolute; margin-left:0px; width: 500px; margin-top:50px;" src="assets/normConcept3.gif">
+            <br>
+            <br>
+
+            The thickness of the polygon is the normal range, all the values have the same normal range now because they are normalized .
 
           </div>
+
+
 
 
 
