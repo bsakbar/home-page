@@ -14,16 +14,13 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap" rel="stylesheet">
 
+
   <style>
 
 
-     html{
-         height: 100%;
-       }
 
      body{
        background-color: #393f46;
-       align-items:center;
 
      }
 
@@ -48,7 +45,6 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
        line-height: 1.3em;
        word-spacing: -0.09em;
        letter-spacing: -0.07em;
-       /* display: block; */
        font-family: 'Roboto Mono', monospace;
        font-weight: 200;
        font-size: 20px;
@@ -72,9 +68,8 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
      .container{
        margin-top:100px;
        margin-left:250px;
-       /* width:1100px; */
+       /* padding-right:200px; */
        display: inline-block;
-       position: relative;
 
       }
 
@@ -191,11 +186,9 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
       }
 
       img{
-        display: flex;
+       display: flex;
        position: absolute;
        z-index: -1;
-
-
       }
 
       .clear_btn{
@@ -230,8 +223,6 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 50% 50%;
-      z-index: -2;
-      display: block;
 
     }
 
@@ -243,14 +234,11 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
    </head>
 
    <body>
-
      <div id="particles-js"></div>
 
      <div class="container">
 
-
           <a class="nav" href="Batool_Akbar.pdf" target="_blank">Resume</a>
-
 
         <div class="txtbox">
           <div style="font-weight:500; display:inline-block;">Batool</div> is a <span class="highlight">data visualization</span> designer and engineer based in New York City.
@@ -269,6 +257,32 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
       <div class="title">
         Work
       </div>
+
+      <div class="cards">
+        <input class="clear_btn" type="button" id="babyNames"></input>
+
+          <span class="workTitle">Popular Baby Names in NYC</span>
+          <div style="
+          border-bottom: 2px solid #000;
+          margin-top:27px;
+          width: 368px;
+          position: relative;
+          "></div>
+
+          <!-- <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="med_video"></input>
+          <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="med_GH"></input>
+          <img style="display:inline-bloc; position:absolute; width:18px; " src="assets/video_icon.png">
+          <img style="width:17px;" src="assets/GitHub.png" > -->
+          <img style="margin-top:50px; margin-left:60px;width: 240px;" src="assets/baby_names.png">
+
+            <div class="tags">
+              <text class="tagHighlight">Dashboard</text>
+              <text class="tagHighlight">Bubble Chart</text>
+              <text class="tagHighlight">D3.js</text>
+              <text class="tagHighlight">Filters</text>
+            </div>
+          </div>
+
 
         <div class="cards">
           <input class="clear_btn" type="button" id="medBtn"></input>
@@ -401,7 +415,7 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
         </div>
 
 
-        <div style="" class="cards">
+        <div class="cards">
           <input class="clear_btn" type="button" id="ddBtn"></input>
 
             <span class="workTitle">Dear Diary</span>
@@ -438,8 +452,9 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
 
       </div>
 
-    </div>
 
+
+    </div>
 
 
 
@@ -455,7 +470,12 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script>
+<script type="text/javascript">
+
+  document.getElementById("babyNames").onclick = function () {
+          location.href = "baby_names/baby_names.html";
+
+      };
 
     document.getElementById("medBtn").onclick = function () {
             location.href = "medigon.html";
