@@ -69,7 +69,9 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
 
      .container{
        margin-top:100px;
-       margin-left:250px;
+       /* margin-left:250px; */
+       margin-left: 15vw;
+       margin-right: 10vw;
        /* padding-right:200px; */
        display: inline-block;
 
@@ -135,12 +137,31 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
        display: inline-block;
      }
 
+     /* mac */
+     @media (max-width:1600px){
+       .container{
+         width:1200px;
+         /* margin-right:50px;
+         margin-left:50px; */
+         margin-left: calc(5vw);
+         margin-right: calc(5vw);
+         transition:0.3s ease all
+
+       }
+       .cardsContainer{
+          width:1200px;
+          transition:0.3s ease all
+      }
+    }
+
      /* ipad */
      @media (max-width:1200px){
        .container{
          width:850px;
-         margin-right:50px;
-         margin-left:50px;
+         /* margin-right:50px;
+         margin-left:50px; */
+         margin-left: calc(15vw);
+         margin-right: calc(5vw);
          transition:0.3s ease all
 
        }
@@ -154,8 +175,10 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
      @media (max-width:768px){
        .container{
          width:400px;
-         margin-left:40px;
-         margin-right:30px;
+         /* margin-left:40px;
+         margin-right:30px; */
+         margin-left: calc(10vw);
+         margin-right: calc(10vw);
          transition:0.3s ease all
        }
 
