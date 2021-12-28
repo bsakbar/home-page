@@ -5,476 +5,304 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
 
 <!doctype html>
 <html lang="en">
-   <head>
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- <link rel="icon" href="assets/tabIcon.png"> -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap" rel="stylesheet"> -->
-     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400&display=swap" rel="stylesheet">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="icon" href="assets/tabIcon.png"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 
 
-  <style>
+  <title>Batool Akbar</title>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <div class="container">
 
 
+    <div class="txtbox">
 
-     body{
-       background-color: #393f46;
-
-     }
-
-     .txtbox{
-       position: relative;
-       margin-top:150px;
-       line-height: 1.4em;
-       /* word-spacing: -0.05em; */
-       letter-spacing: 0.01em;
-       display:block;
-       /* font-family: 'Roboto Mono', monospace; */
-       font-family: 'Titillium Web', sans-serif;
-       font-weight: 200;
-       font-size: 26px;
-       /* color: #bec2c5; */
-       color: white;
-       opacity: 0.8;
-
-     }
-
-     .title{
-       position: relative;
-       margin-top: 100px;
-       line-height: 1.3em;
-       word-spacing: -0.09em;
-       letter-spacing: -0.07em;
-       font-family: 'Roboto Mono', monospace;
-       font-weight: 200;
-       font-size: 20px;
-       color: #ff5122;
-     }
-
-     .workTitle{
-       position: absolute;
-       line-height: 1.5em;
-       word-spacing: -0.08em;
-       letter-spacing: -0.02em;
-       margin-left: 10px;
-       /* font-family:'Quicksand', sans-serif; */
-       font-family: 'Roboto Mono', monospace;
-       width: 300px;
-       font-weight: 300;
-       font-size: 18px;
-       color: #000;
-     }
-
-     .container{
-       margin-top:100px;
-       /* margin-left:250px; */
-       margin-left: 15vw;
-       margin-right: 10vw;
-       /* padding-right:200px; */
-       display: inline-block;
-
-      }
-
-      .nav{
-        font-family: 'Roboto Mono', monospace;
-        text-decoration: none;
-        color: #ff5122;
-        height: 25px;
-        font-weight: 200;
-        /* display: flex; */
-        position: relative;
-        word-spacing: -0.09em;
-        letter-spacing: -0.07em;
-        font-size: 20px;
-        float: right;
-      }
-
-      .nav:hover{
-        text-decoration: none;
-        color: #ff5122;
-        font-weight: 300;
-      }
-
-
-     .cards{
-       background: transparent;
-       border: 2px solid #000;
-       height:370px;
-       width:370px;
-       display: inline-block;
-       margin-top:30px;
-
-     }
-
-     .tags{
-       margin-top: 350px;
-       font-family: 'Titillium Web', sans-serif;
-       font-size: 12px;
-       font-weight: 200;
-       letter-spacing: 0.01em;
-       color:#bec2c5;
-     }
-
-     .tagHighlight{
-       padding-left:2px;
-       padding-right: 2px;
-       background: transparent;
-       border: 1px solid #000;
-       position: relative;
-       display: inline-block;
-       width:max-content;
-       text-align: center;
-       vertical-align: middle;
-       line-height: 20px;
-       height:20px;
-     }
-
-     .cardsContainer{
-       width: 1200px;
-       margin-top:50px;
-       display: inline-block;
-     }
-
-     /* mac */
-     @media (max-width:1450px){
-       .container{
-         width:1200px;
-         /* margin-right:50px;
-         margin-left:50px; */
-         margin-left: calc(5vw);
-         margin-right: calc(5vw);
-         transition:0.3s ease all
-
-       }
-       .cardsContainer{
-          width:1200px;
-          transition:0.3s ease all
-      }
-    }
-
-     /* ipad */
-     @media (max-width:1200px){
-       .container{
-         width:850px;
-         /* margin-right:50px;
-         margin-left:50px; */
-         margin-left: calc(15vw);
-         margin-right: calc(5vw);
-         transition:0.3s ease all
-
-       }
-       .cardsContainer{
-          width:850px;
-          transition:0.3s ease all
-      }
-    }
-
-    /* phone */
-     @media (max-width:768px){
-       .container{
-         width:400px;
-         /* margin-left:40px;
-         margin-right:30px; */
-         margin-left: calc(10vw);
-         margin-right: calc(10vw);
-         transition:0.3s ease all
-       }
-
-       .cardsContainer{
-          width:400px;
-          transition:0.3s ease all
-      }
-      .txtbox{
-        line-height: 1.5em;
-        /* word-spacing: -0.08em;
-        letter-spacing: -0.025em; */
-        display:block;
-        font-size: 26px;
-
-      }
-    }
-
-     .cardsContainer::-webkit-scrollbar {
-        width: 0px;
-        height: 0px;
-      }
-
-      .cardsContainer::-webkit-scrollbar-thumb {
-        background: transparent;
-      }
-
-      .cardsContainer::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      img{
-       display: flex;
-       position: absolute;
-       z-index: -1;
-      }
-
-      .clear_btn{
-        z-index:2;
-        margin-top:27px;
-        position: absolute;
-        display: inline;
-        outline:none;
-        -webkit-box-shadow: 0px 0px 0px;
-        box-shadow: 0px 0px 0px;
-        background-color: transparent;
-        border: none;
-       -webkit-appearance: none;
-        cursor: pointer;
-        width: 370px;
-        height:340px;
-      }
-
-      .clear_btn:hover{
-        outline:none;
-        background-color: #ffffff;
-        opacity: 0.035;
-
-      }
-
-
-      #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: url("");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 50%;
-
-    }
-
-    #bubble-cluster{
-      position: absolute;
-      display: flex;
-
-
-    }
-
-
-
-     </style>
-
-     <title>Batool Akbar</title>
-   </head>
-
-   <body>
-     <div id="particles-js"></div>
-
-     <div class="container">
-
-          <a class="nav" href="Batool_Akbar.pdf" target="_blank">Resume</a>
-
-        <div class="txtbox">
-          <div style="font-weight:500; display:inline-block;">Batool</div> is a <span class="highlight">data visualization</span> designer and engineer based in New York City.
-          She brings together <span class="highlight">UX/</span><span class="highlight">UI design</span>, and web <span class="highlight">development</span> to solve data communication problems.
-          <br>
-          <br>
-          Email: batool.s.ak@gmail.com
-
-        </div>
+      <div class="resume">
+        <a class="nav" href="Batool_Akbar.pdf">Resume</a>
+      </div>
+      
+      <div class="bio">
+        <div style="font-weight:500; display:inline-block;">Batool</div> is a <span class="highlight">data
+          visualization</span> designer and developer based in New York City.
+        She brings together <span class="highlight">UX/</span><span class="highlight">UI design</span>, and web <span
+          class="highlight">development</span> to solve data communication problems.
+        <br>
+        <br>
+        Email: batool.s.ak@gmail.com
+      </div>
+    </div>
 
 
     <div class="cardsContainer">
 
-              <img style="margin-top:0px;width:25px;" src="assets/arrow.png" >
+      <img style="margin-top:0px;width:25px;" src="assets/arrow.png">
 
       <div class="title">
         Work
       </div>
 
-      <div class="cards">
-        <input class="clear_btn" type="button" id="babyNames"></input>
+      <!-- <div class="cards">
+        <input class="clear_btn" type="button" id="flexiTable"></input>
 
-          <span style=" word-spacing: -0.09em;
-          letter-spacing: -0.07em;"
-          class="workTitle">(WIP) Popular Baby Names in NYC</span>
-          <div style="
+        <span style=" word-spacing: -0.09em;
+          letter-spacing: -0.07em;" class="workTitle">PowerScore</span>
+        <div style="
           border-bottom: 2px solid #000;
           margin-top:27px;
           width: 368px;
           position: relative;
           "></div>
 
-          <div id="bubble-cluster"></div>
+        <div class="tags">
+          <text class="tagHighlight">Dashboard</text>
+          <text class="tagHighlight">Application</text>
+          <text class="tagHighlight">React</text>
+        </div>
+      </div>
 
-          <!-- <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="med_video"></input>
+      <div class="cards">
+        <input class="clear_btn" type="button" id="flexiTable"></input>
+
+        <span style=" word-spacing: -0.09em;
+          letter-spacing: -0.07em;" class="workTitle">FlexiTable</span>
+        <div style="
+          border-bottom: 2px solid #000;
+          margin-top:27px;
+          width: 368px;
+          position: relative;
+          "></div>
+
+        <div class="tags">
+          <text class="tagHighlight">Tableau</text>
+          <text class="tagHighlight">Dashboard</text>
+          <text class="tagHighlight">API</text>
+          <text class="tagHighlight">React</text>
+          <text class="tagHighlight">Extension</text>
+          <text class="tagHighlight">Table</text>
+        </div>
+      </div>
+
+      <div class="cards">
+        <input class="clear_btn" type="button" id="tableauD3"></input>
+
+        <span style=" word-spacing: -0.09em;
+          letter-spacing: -0.07em;" class="workTitle">Tableau X d3js</span>
+        <div style="
+          border-bottom: 2px solid #000;
+          margin-top:27px;
+          width: 368px;
+          position: relative;
+          "></div>
+
+
+        <div class="tags">
+          <text class="tagHighlight">Tableau</text>
+          <text class="tagHighlight">Dashboard</text>
+          <text class="tagHighlight">API</text>
+          <text class="tagHighlight">D3.js</text>
+          <text class="tagHighlight">Extension</text>
+        </div>
+      </div> -->
+
+
+      <div class="cards">
+        <input class="clear_btn" type="button" id="babyNames"></input>
+
+        <span style=" word-spacing: -0.09em;
+          letter-spacing: -0.07em;" class="workTitle">Popular Baby Names in NYC</span>
+        <div style="
+          border-bottom: 2px solid #000;
+          margin-top:27px;
+          width: 368px;
+          position: relative;
+          "></div>
+
+        <div id="bubble-cluster"></div>
+
+        <!-- <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="med_video"></input>
           <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="med_GH"></input>
           <img style="display:inline-bloc; position:absolute; width:18px; " src="assets/video_icon.png">
           <img style="width:17px;" src="assets/GitHub.png" > -->
-          <!-- <img style="margin-top:50px; margin-left:60px;width: 240px;" src="assets/baby_names.png"> -->
+        <!-- <img style="margin-top:50px; margin-left:60px;width: 240px;" src="assets/baby_names.png"> -->
 
-            <div class="tags">
-              <text class="tagHighlight">Dashboard</text>
-              <text class="tagHighlight">Bubble Chart</text>
-              <text class="tagHighlight">D3.js</text>
-              <text class="tagHighlight">Filters</text>
-            </div>
-          </div>
+        <div class="tags">
+          <text class="tagHighlight">Dashboard</text>
+          <text class="tagHighlight">Bubble Chart</text>
+          <text class="tagHighlight">D3.js</text>
+          <text class="tagHighlight">Filters</text>
+        </div>
+      </div>
 
 
-        <div class="cards">
-          <input class="clear_btn" type="button" id="medBtn"></input>
+      <div class="cards">
+        <input class="clear_btn" type="button" id="medBtn"></input>
 
-            <span class="workTitle">Medigon</span>
-            <div style="
+        <span class="workTitle">Medigon</span>
+        <div style="
             border-bottom: 2px solid #000;
             margin-top:27px;
             width: 368px;
             position: relative;
             "></div>
 
-            <!-- <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="med_video"></input>
+        <!-- <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="med_video"></input>
             <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="med_GH"></input>
             <img style="display:inline-bloc; position:absolute; width:18px; " src="assets/video_icon.png">
             <img style="width:17px;" src="assets/GitHub.png" > -->
-            <img style="margin-top:-2px; margin-left:-2px;width: 370px;" src="assets/med_new_3.png">
+        <img style="margin-top:-2px; margin-left:-2px;width: 370px;" src="assets/med_new_3.png">
 
-              <div class="tags">
-                <text class="tagHighlight">Interface</text>
-                <text class="tagHighlight">Medicine</text>
-                <text class="tagHighlight">Polygons</text>
-                <text class="tagHighlight">Blood Tests</text>
-              </div>
+        <div class="tags">
+          <text class="tagHighlight">Interface</text>
+          <text class="tagHighlight">Medicine</text>
+          <text class="tagHighlight">Polygons</text>
+          <text class="tagHighlight">Blood Tests</text>
         </div>
+      </div>
 
 
 
-        <div class="cards">
-          <input class="clear_btn" type="button" id="unBtn"></input>
+      <div class="cards">
+        <input class="clear_btn" type="button" id="unBtn"></input>
 
-            <span class="workTitle">Quality Education</span>
-            <div style="
-            border-bottom: 2px solid #000;
-            margin-top:27px;
-            width: 368px;
-            position: relative;
-            "></div>
-
-            <!-- <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="un_video"></input>
-            <img style="width:18px; margin-top:8px;" src="assets/video_icon.png" > -->
-            <img style="margin-top:-3px; margin-left:-2px; width: 370px; " src="assets/UN_new.png">
-
-            <div class="tags">
-              <text class="tagHighlight">Dashboard</text>
-              <text class="tagHighlight">Africa</text>
-              <text class="tagHighlight">Education</text>
-              <text class="tagHighlight">Energy</text>
-            </div>
-        </div>
-
-        <div  class="cards">
-          <input class="clear_btn" type="button" id="eqBtn"></input>
-
-            <span class="workTitle">Earthquakes in North America</span>
-            <div style="
-            border-bottom: 2px solid #000;
-            margin-top:27px;
-            width: 368px;
-            position: relative;
-            "></div>
-
-            <img style="margin-top:-2px; width:368px;" src="assets/eq_new_2.png">
-
-            <div class="tags">
-              <text class="tagHighlight">Maps</text>
-              <text class="tagHighlight">Earthquakes</text>
-              <text class="tagHighlight">Magnitude</text>
-              <text class="tagHighlight">Depth</text>
-            </div>
-        </div>
-
-        <div class="cards">
-          <input class="clear_btn" type="button" id="ntBtn"></input>
-
-            <span class="workTitle">Mapping Quantity</span>
-            <div style="
-            border-bottom: 2px solid #000;
-            margin-top:27px;
-            width: 368px;
-            position: relative;
-            "></div>
-
-            <img style="width: 370px;" src="assets/nuc_new.png">
-
-              <div class="tags">
-                <text class="tagHighlight">Poster</text>
-                <text class="tagHighlight">Nuclear</text>
-                <text class="tagHighlight">Timeline</text>
-              </div>
-        </div>
-
-        <div class="cards">
-            <input class="clear_btn" type="button" id="timeBtn"></input>
-            <span class="workTitle">"Show" Me the Time</span>
-            <div style="
-            border-bottom: 2px solid #000;
-            margin-top:27px;
-            width: 368px;
-            position: relative;
-            "></div>
-
-              <img style="width: 330px; margin-top:15px;margin-left:15px;" src="assets/MT_new.gif">
-
-            <div class="tags">
-              <text class="tagHighlight">Time</text>
-              <text class="tagHighlight">Clock</text>
-              <text class="tagHighlight">Calendar</text>
-            </div>
-        </div>
-
-        <div class="cards">
-          <input class="clear_btn" type="button" id="aurBtn"></input>
-            <span class="workTitle">Light Sensor</span>
-            <div style="
-            border-bottom: 2px solid #000;
-            margin-top:27px;
-            width: 368px;
-            position: relative;
-            "></div>
-
-            <img style="margin-left:-2px; width: 370px;" src="assets/ls_new.png">
-
-            <div class="tags">
-              <text class="tagHighlight">Databases</text>
-              <text class="tagHighlight">Sensor</text>
-              <text class="tagHighlight">Photocell</text>
-              <text class="tagHighlight">Transistor</text>
-            </div>
-        </div>
-
-
-        <div class="cards">
-          <input class="clear_btn" type="button" id="ddBtn"></input>
-
-            <span class="workTitle">Dear Diary</span>
-            <div style="
-            border-bottom: 2px solid #000;
-            margin-top:27px;
-            width: 368px;
-            position: relative;
-            "></div>
-
-            <img style="margin-left:-5px; width: 370px;" src="assets/dd_web.png">
-
-              <div class="tags">
-                <text class="tagHighlight">Databases</text>
-                <text class="tagHighlight">Colors</text>
-                <text class="tagHighlight">Diary</text>
-                <text class="tagHighlight">P5js</text>
-              </div>
-        </div>
-
-
+        <span class="workTitle">Quality Education</span>
         <div style="
+            border-bottom: 2px solid #000;
+            margin-top:27px;
+            width: 368px;
+            position: relative;
+            "></div>
+
+        <!-- <input style="width:20px; height:20px;margin-top:5px;" class="clear_btn" type="button" id="un_video"></input>
+            <img style="width:18px; margin-top:8px;" src="assets/video_icon.png" > -->
+        <img style="margin-top:-3px; margin-left:-2px; width: 370px; " src="assets/UN_new.png">
+
+        <div class="tags">
+          <text class="tagHighlight">Dashboard</text>
+          <text class="tagHighlight">Africa</text>
+          <text class="tagHighlight">Education</text>
+          <text class="tagHighlight">Energy</text>
+        </div>
+      </div>
+
+      <div class="cards">
+        <input class="clear_btn" type="button" id="eqBtn"></input>
+
+        <span class="workTitle">Earthquakes in North America</span>
+        <div style="
+            border-bottom: 2px solid #000;
+            margin-top:27px;
+            width: 368px;
+            position: relative;
+            "></div>
+
+        <img style="margin-top:-2px; width:368px;" src="assets/eq_new_2.png">
+
+        <div class="tags">
+          <text class="tagHighlight">Maps</text>
+          <text class="tagHighlight">Earthquakes</text>
+          <text class="tagHighlight">Magnitude</text>
+          <text class="tagHighlight">Depth</text>
+        </div>
+      </div>
+
+      <div class="cards">
+        <input class="clear_btn" type="button" id="ntBtn"></input>
+
+        <span class="workTitle">Mapping Quantity</span>
+        <div style="
+            border-bottom: 2px solid #000;
+            margin-top:27px;
+            width: 368px;
+            position: relative;
+            "></div>
+
+        <img style="width: 370px;" src="assets/nuc_new.png">
+
+        <div class="tags">
+          <text class="tagHighlight">Poster</text>
+          <text class="tagHighlight">Nuclear</text>
+          <text class="tagHighlight">Timeline</text>
+        </div>
+      </div>
+
+      <div class="cards">
+        <input class="clear_btn" type="button" id="timeBtn"></input>
+        <span class="workTitle">"Show" Me the Time</span>
+        <div style="
+            border-bottom: 2px solid #000;
+            margin-top:27px;
+            width: 368px;
+            position: relative;
+            "></div>
+
+        <img style="width: 330px; margin-top:15px;margin-left:15px;" src="assets/MT_new.gif">
+
+        <div class="tags">
+          <text class="tagHighlight">Time</text>
+          <text class="tagHighlight">Clock</text>
+          <text class="tagHighlight">Calendar</text>
+        </div>
+      </div>
+
+      <div class="cards">
+        <input class="clear_btn" type="button" id="aurBtn"></input>
+        <span class="workTitle">Light Sensor</span>
+        <div style="
+            border-bottom: 2px solid #000;
+            margin-top:27px;
+            width: 368px;
+            position: relative;
+            "></div>
+
+        <img style="margin-left:-2px; width: 370px;" src="assets/ls_new.png">
+
+        <div class="tags">
+          <text class="tagHighlight">Databases</text>
+          <text class="tagHighlight">Sensor</text>
+          <text class="tagHighlight">Photocell</text>
+          <text class="tagHighlight">Transistor</text>
+        </div>
+      </div>
+
+
+      <div class="cards">
+        <input class="clear_btn" type="button" id="ddBtn"></input>
+
+        <span class="workTitle">Dear Diary</span>
+        <div style="
+            border-bottom: 2px solid #000;
+            margin-top:27px;
+            width: 368px;
+            position: relative;
+            "></div>
+
+        <img style="margin-left:-5px; width: 370px;" src="assets/dd_web.png">
+
+        <div class="tags">
+          <text class="tagHighlight">Databases</text>
+          <text class="tagHighlight">Colors</text>
+          <text class="tagHighlight">Diary</text>
+          <text class="tagHighlight">P5js</text>
+        </div>
+      </div>
+
+
+      <div style="
         width:500px;
         word-spacing: -0.09em;
         letter-spacing: -0.07em;
@@ -487,55 +315,67 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
         padding-bottom: 100px;
         ">More work will be posted soon..</div>
 
-      </div>
-
-
-
     </div>
 
 
-<script src="https://d3js.org/d3.v5.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="particles.js"></script>
-<script src="bubble-cluster.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </div>
 
 
-<script type="text/javascript">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="particles.js"></script>
+  <script src="bubble-cluster.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
-  document.getElementById("babyNames").onclick = function () {
-          location.href = "baby_names/baby_names.html";
 
-      };
+  <script type="text/javascript">
+
+    document.getElementById("babyNames").onclick = function () {
+      location.href = "baby_names/baby_names.html";
+
+    };
 
     document.getElementById("medBtn").onclick = function () {
-            location.href = "medigon.html";
+      location.href = "medigon.html";
 
-        };
+    };
 
     document.getElementById("unBtn").onclick = function () {
-            location.href = "https://github.com/bsakbar/major-studio-1/tree/master/Final%20assignment";
-        };
+      location.href = "https://github.com/bsakbar/major-studio-1/tree/master/Final%20assignment";
+    };
 
     document.getElementById("eqBtn").onclick = function () {
-            location.href = "https://bsakbar.github.io/dvia_2018/mapping_space/";
-        };
+      location.href = "https://bsakbar.github.io/dvia_2018/mapping_space/";
+    };
 
     document.getElementById("timeBtn").onclick = function () {
-            location.href = "mapping_time";
-        };
+      location.href = "mapping_time";
+    };
 
     document.getElementById("aurBtn").onclick = function () {
-            location.href = "https://github.com/bsakbar/data-structures/tree/master/Final_Assignments/Photocell";
-        };
+      location.href = "https://github.com/bsakbar/data-structures/tree/master/Final_Assignments/Photocell";
+    };
 
     document.getElementById("ntBtn").onclick = function () {
-            location.href = "https://github.com/bsakbar/dvia_2018/tree/master/mapping_quantities";
-        };
+      location.href = "https://github.com/bsakbar/dvia_2018/tree/master/mapping_quantities";
+    };
 
     // document.getElementById("med_video").onclick = function () {
     //         location.href = "https://vimeo.com/337975236";
@@ -550,136 +390,137 @@ particlesJS: https://github.com/VincentGarreau/particles.js/
     //     };
 
     document.getElementById("ddBtn").onclick = function () {
-            location.href = "https://github.com/bsakbar/data-structures/tree/master/Final_Assignments/Dear_Diary";
-        };
+      location.href = "https://github.com/bsakbar/data-structures/tree/master/Final_Assignments/Dear_Diary";
+    };
 
 
 
-          //particlesJS
-          // particlesJS: https://github.com/VincentGarreau/particles.js/
+    //particlesJS
+    // particlesJS: https://github.com/VincentGarreau/particles.js/
 
-          particlesJS({
-        "particles": {
-          "number": {
-            "value": 500,
-            "density": {
-              "enable": true,
-              "value_area": 8700
-            }
-          },
-          "color": {
-            "value": "#6e7a87"
-          },
-          "shape": {
-            "type": "edge",
-            "stroke": {
-              "width": 0,
-              "color": "#0fffc7"
-            },
-          },
-          "opacity": {
-            "value": 1,
-            "random": true,
-            "anim": {
-              "enable": false,
-              "speed": 3,
-              "opacity_min": 0.5,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 2,
-            "random": true,
-            "anim": {
-              "enable": false,
-              "speed": 15,
-              "size_min": 0.1,
-              "sync": false
-            }
-          },
-          "line_linked": {
+    particlesJS({
+      "particles": {
+        "number": {
+          "value": 500,
+          "density": {
             "enable": true,
-            "distance": 120,
-            "color": "#b1b1b1",
-            "opacity": 0.5,
-            "width": 0
-          },
-          "move": {
-            "enable": true,
-            "speed": 1,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 600
-            }
+            "value_area": 8700
           }
         },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "grab"
-            },
-            "onclick": {
-              "enable": false,
-              "mode": "push"
-            },
-            "resize": true
+        "color": {
+          "value": "#6e7a87"
+        },
+        "shape": {
+          "type": "edge",
+          "stroke": {
+            "width": 0,
+            "color": "#0fffc7"
           },
-          "modes": {
-            "grab": {
-              "distance": 300,
-              "line_linked": {
-                "opacity": .5
-              }
-            },
-            "bubble": {
-              "distance": 400,
-              "size": 40,
-              "duration": 2,
-              "opacity": 8,
-              "speed": 3
-            },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
-            },
-            "push": {
-              "particles_nb": 4
-            },
-            "remove": {
-              "particles_nb": 2
-            }
+        },
+        "opacity": {
+          "value": 1,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 3,
+            "opacity_min": 0.5,
+            "sync": false
           }
         },
-        "retina_detect": true
-        });
-      var count_particles, stats, update;
-      stats = new Stats;
-      stats.setMode(0);
-      stats.domElement.style.position = 'absolute';
-      stats.domElement.style.left = '0px';
-      stats.domElement.style.top = '0px';
-      document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector('.js-count-particles');
-      update = function() {
-          stats.begin();
-          stats.end();
-          if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-              count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        "size": {
+          "value": 2,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 15,
+            "size_min": 0.1,
+            "sync": false
           }
-          requestAnimationFrame(update);
-      };
-      requestAnimationFrame(update);;
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 120,
+          "color": "#b1b1b1",
+          "opacity": 0.5,
+          "width": 0
+        },
+        "move": {
+          "enable": true,
+          "speed": 1,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 600
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": false,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 300,
+            "line_linked": {
+              "opacity": .5
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+      stats.begin();
+      stats.end();
+      if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      }
+      requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);;
 
 
 
-</script>
-   </body>
+  </script>
+</body>
+
 </html>
