@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
 
-      <!-- <meta charset="UTF-8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+
+  <!-- <meta charset="UTF-8">
      <title>Dashboard</title>
      <link rel="manifest" href="manifest.json">
      <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase.js"></script>
@@ -16,109 +17,67 @@
      <link type="text/css" rel="stylesheet" href="dist/firebaseui.css" />
      <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
-      <style>
+  <style>
+    body {
+      /* overflow: hidden; */
+      align-items: center;
+    }
 
-      body{
-        overflow: hidden;
 
-      }
+    svg {
+      width: 100%;
+      height: auto;
+    }
 
-      .title{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        font-size: 40px;
-        letter-spacing: -2px;
-        margin-left: 100px;
-        margin-top:80px;
-      }
 
-      #dashboard{
-        position: absolute;
-        display: inline-block;
-        padding-left: 100px;
-        padding-top: 40px;
-        width: 100%;
-        height: 100%;
-      }
+    .title {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: 42px;
+      letter-spacing: -2px;
+      margin-top: 7vh;
+      text-align: center;
+    }
 
-      #left_container{
-        position: absolute;
-        display: flex;
-        background-color: #eee;
-        border-radius: 15px;
-        width: 630px;
-        height: 630px;
-        margin-top: 20px;
-        /* padding: 30px; */
-      }
 
-      .legend{
-        display: block;
-        position: absolute;
-        margin-top: 650px;
-        margin-left: 30px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-        font-size: 12px;
-      }
 
-      .dot_legend {
-        height: 9px;
-        width: 9px;
-        border-radius: 50%;
-        display: inline-block;
-      }
+    #box {
+      display: flex;
+      background-color: #eee;
+      border-radius: 15px;
+      aspect-ratio: 1 / 1;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      #right_container{
-        display: flex;
-        display: inline-block;
-        /* background-color:red; */
-        border-radius: 15px;
-        width: 660px;
-        height: 600px;
-        margin-top: 20px;
-        margin-left: 700px;
-        padding-right: 30px;
-        padding-left: 30px;
-      }
+    .legend {
+      display: block;
+      position: absolute;
+      margin-top: 650px;
+      margin-left: 30px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+    }
 
-      .cards{
-        position: absolute;
-        display: inline-block;
-        width:200px;
-        height: 200px;
-        border-radius: 15px;
-        background-color: #eee;
-      }
+    .dot_legend {
+      height: 9px;
+      width: 9px;
+      border-radius: 50%;
+      display: inline-block;
+    }
 
-      .mini-tags{
-        margin-top:210px;
-        position: relative;
-        display:inline-block;
-        height: 14px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 10px;
-        font-weight: 300;
-        border: 0px solid black;
-        background: #474747;
-        color: #fff;
-        padding-top: 3px;
-        padding-right: 5px;
-        padding-left: 5px;
-        border-radius: 30px;
-        width: max-content;
-      }
+    #filter {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      width: max-content;
+      margin-top: 20px;
+    }
 
-      #visualization{
-        /* border: 1px solid red; */
-        height: 100%;
-        position: relative;
-
-      }
-
-    #ethnicity_tags{
-      position: relative;
-      display:inline-block;
+    #ethnicity_tags {
       height: 25px;
       font-family: 'Roboto', sans-serif;
       font-weight: 300;
@@ -128,11 +87,9 @@
       padding-right: 10px;
       border-radius: 30px;
       width: max-content;
-  }
+    }
 
-    #gender_tags{
-      position: relative;
-      display:inline-block;
+    #gender_tags {
       height: 25px;
       font-family: 'Roboto', sans-serif;
       font-weight: 300;
@@ -143,26 +100,24 @@
       border-radius: 30px;
       margin-left: 10px;
       width: max-content;
-  }
+    }
 
-  #year_tags{
-    position: relative;
-    display:inline-block;
-    height: 25px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    border: 0px solid black;
-    background: #eee;
-    padding-top: 4px;
-    padding-right: 10px;
-    border-radius: 30px;
-    margin-left: 10px;
-    width: max-content;
-}
+    #year_tags {
+      height: 25px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      border: 0px solid black;
+      background: #eee;
+      padding-top: 4px;
+      padding-right: 10px;
+      border-radius: 30px;
+      margin-left: 10px;
+      width: max-content;
+    }
 
 
-
-  .container {
+    .container {
+      width: max-content;
       font-family: 'Roboto', sans-serif;
       position: relative;
       padding-left: 17px;
@@ -193,11 +148,10 @@
       width: 10px;
       border-radius: 30px;
       background-color: #d1d1d1;
-
     }
 
 
-    .container input:checked ~ .checkmark {
+    .container input:checked~.checkmark {
       background-color: #f75f5f;
     }
 
@@ -207,11 +161,11 @@
       display: none;
     }
 
-    a{
+    a {
       position: absolute;
       z-index: +20;
-      width:35px;
-      height:35px;
+      width: 35px;
+      height: 35px;
       border-radius: 50px;
       background: #d1d1d1;
       font-family: 'Roboto', sans-serif;
@@ -222,165 +176,131 @@
       margin-left: 570px;
       color: #474747;
     }
-    a:hover{
+
+    a:hover {
       cursor: pointer;
       color: #f75f5f;
       font-weight: 300;
     }
-    img{
-      position: absolute;
+
+    @media screen and (max-width: 3200px) {
+      #box {
+        height: 70vh;
+      }
+
+      .title {
+        font-size: 42px;
+        text-align: center;
+      }
     }
-    #example_1,
-    #example_tags{
-      display: none;
+
+    @media screen and (max-width: 800px) {
+      #box {}
+
+      .title {
+        font-size: 34px;
+        width: 90vw;
+        text-align: left;
+      }
     }
+  </style>
+</head>
 
-      </style>
-   </head>
 
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="dashboard.js"></script>
 
-   <body>
-       <!-- <script src="app.js"></script> -->
-      <script src="https://d3js.org/d3.v5.min.js"></script>
-      <script src="dashboard.js"></script>
-      <div class="title">Popular Baby Names in NYC <span style="margin-left:10px;font-size:35px;font-weight:100; color:#fa9e9e;"> 2015–2016</div>
+  <div id="wrapper">
+    <div class="title">Popular Baby Names in NYC <span style="font-size:35px;font-weight:100; color:#fa9e9e;"> 2015–2016
+    </div>
 
-      <div id="dashboard">
-
+    <div id="content">
+      <div id="filter">
         <div id=ethnicity_tags>
-
           <label class="container">
-          <input type ="radio" id="hispanic_b" name="ethnicity" class="main_tags" onclick="vizSpecs()" checked />Hispanic
-          <span class="checkmark"></span>
-          &nbsp
-        </label>
-        <label class="container">
-          <input type="radio" id="white_b"class="main_tags" name="ethnicity" onclick="vizSpecs()" />White
-          <span class="checkmark"></span>
-          &nbsp
-        </label>
-        <label class="container">
-          <input type ="radio" id="black_b" class="main_tags" name="ethnicity" onclick="vizSpecs()" />Black
-          <span class="checkmark"></span>
-          &nbsp
-        </label>
-        <label class="container">
-          <input type ="radio" id="asian_b" class="main_tags" name="ethnicity" onclick="vizSpecs()" />Asian
-          <span class="checkmark"></span>
-        </label>
+            <input type="radio" id="hispanic_b" name="ethnicity" class="main_tags" onclick="vizSpecs()"
+              checked />Hispanic
+            <span class="checkmark"></span>
+            &nbsp
+          </label>
+          <label class="container">
+            <input type="radio" id="white_b" class="main_tags" name="ethnicity" onclick="vizSpecs()" />White
+            <span class="checkmark"></span>
+            &nbsp
+          </label>
+          <label class="container">
+            <input type="radio" id="black_b" class="main_tags" name="ethnicity" onclick="vizSpecs()" />Black
+            <span class="checkmark"></span>
+            &nbsp
+          </label>
+          <label class="container">
+            <input type="radio" id="asian_b" class="main_tags" name="ethnicity" onclick="vizSpecs()" />Asian
+            <span class="checkmark"></span>
+          </label>
         </div>
 
         <div id=gender_tags>
           <label class="container">
-          <input type ="checkbox" id="male_b" class="main_tags" onclick="vizSpecs()" checked />Male
-          <span class="checkmark"></span>
-          &nbsp
-        </label>
-        <label class="container">
-          <input type="checkbox" id="female_b"class="main_tags" onclick="vizSpecs()" checked />Female
-          <span class="checkmark"></span>
-          &nbsp
-        </label>
+            <input type="checkbox" id="male_b" class="main_tags" onclick="vizSpecs()" checked />Male
+            <span class="checkmark"></span>
+            &nbsp
+          </label>
+          <label class="container">
+            <input type="checkbox" id="female_b" class="main_tags" onclick="vizSpecs()" checked />Female
+            <span class="checkmark"></span>
+            &nbsp
+          </label>
         </div>
 
         <div id=year_tags>
           <label class="container">
-          <input type ="checkbox" id="year1_b" class="main_tags" onclick="vizSpecs()" checked />2015
-          <span class="checkmark"></span>
-          &nbsp
-        </label>
-        <label class="container">
-          <input type="checkbox" id="year2_b"class="main_tags" onclick="vizSpecs()"/>2016
-          <span class="checkmark"></span>
-          &nbsp
-        </label>
-        </div>
-
-        <div id="left_container">
-            <a class="plus_btn"id="add_btn">+</a>
-
-          <div id="visualization"></div>
-          <div class="legend">
-
-            <div class="dot_legend" style="background-color:#0affe7"></div>&nbsp
-            <span>Female</span>&nbsp
-
-            <div class="dot_legend"style="background-color:#6b75ff; margin-left:10px;"></div>&nbsp
-            <span>Male</span>&nbsp
-
-            <div class="dot_legend"style="background-color:#ff4a2e; margin-left:10px;"></div>&nbsp
-            <span>Both</span>
-
-          </div>
-
-
-        </div>
-
-        <div id="right_container">
-          <div class="cards">
-            <img id="example_1" style="margin-left:20px;margin-top:20px; width:160px;" src="example_1.png">
-
-              <a id ="remove_btn" style="width:20px;
-                height:20px;
-                font-size: 18px;
-                text-align: center;
-                margin-top: 160px;
-                margin-left: 190px;
-                font-weight:300"
-                >–</a>
-                <div id="example_tags">
-                <span class="mini-tags">Hispanic</span>&nbsp<span class="mini-tags">2015</span></div>
-          </div>
-          <div class="cards" style="margin-left:230px;">
-            <a style="width:20px;
-              height:20px;
-              font-size: 18px;
-              text-align: center;
-              margin-top: 160px;
-              margin-left: 190px;
-              font-weight:300"
-              >–</a>
-            <!-- <span class="mini-tags">Black</span>&nbsp<span class="mini-tags">Female</span>&nbsp<span class="mini-tags">2016</span> -->
-          </div>
-          <div class="cards" style="margin-left:460px;">
-            <a style="width:20px;
-              height:20px;
-              font-size: 18px;
-              text-align: center;
-              margin-top: 160px;
-              margin-left: 190px;
-              font-weight:300"
-              >–</a></div>
-          <div class="cards"style="margin-top:270px;">
-            <a style="width:20px;
-              height:20px;
-              font-size: 18px;
-              text-align: center;
-              margin-top: 160px;
-              margin-left: 190px;
-              font-weight:300"
-              >–</a></div>
-
-
+            <input type="checkbox" id="year1_b" class="main_tags" onclick="vizSpecs()" checked />2015
+            <span class="checkmark"></span>
+            &nbsp
+          </label>
+          <label class="container">
+            <input type="checkbox" id="year2_b" class="main_tags" onclick="vizSpecs()" />2016
+            <span class="checkmark"></span>
+            &nbsp
+          </label>
         </div>
       </div>
-      <script>
+      <div id="box">
 
-var add_btn = document.getElementById('add_btn');
+        <div id="visualization"></div>
+        <div class="legend">
 
-add_btn.onclick = function() {
-  example_1.style.display = "block";
-  example_tags.style.display = "block";
-}
+          <div class="dot_legend" style="background-color:#0affe7"></div>&nbsp
+          <span>Female</span>&nbsp
 
-var remove_btn = document.getElementById('remove_btn');
+          <div class="dot_legend" style="background-color:#6b75ff; margin-left:10px;"></div>&nbsp
+          <span>Male</span>&nbsp
 
-remove_btn.onclick = function() {
-  example_1.style.display = "none";
-  example_tags.style.display = "none";
-}
+          <div class="dot_legend" style="background-color:#ff4a2e; margin-left:10px;"></div>&nbsp
+          <span>Both</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var add_btn = document.getElementById('add_btn');
+
+    add_btn.onclick = function () {
+      example_1.style.display = "block";
+      example_tags.style.display = "block";
+    }
+
+    var remove_btn = document.getElementById('remove_btn');
+
+    remove_btn.onclick = function () {
+      example_1.style.display = "none";
+      example_tags.style.display = "none";
+    }
 
 
-      </script>
-   </body>
+  </script>
+</body>
+
 </html>
