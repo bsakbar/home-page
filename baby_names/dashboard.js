@@ -12,7 +12,7 @@ const width = d3.min([
   window.innerHeight * 0.7,
 ])
 
-var height = 500
+var height = 500;
 var dimensions = {
   width: width,
   height: width,
@@ -72,10 +72,12 @@ function drawViz(ethnicity, year, gender){
   shuffle(results_arr);
 
   // adding an svg element inside the visualization before drawing
+
+ 
   const visualization = d3.select("#visualization")
     .append("svg")
-    .attr("width", dimensions.width)
-    .attr("height", dimensions.height)
+    .attr("width", width)
+    .attr("height", height)
 
   // specify bubbles behavior
   const simulation = d3.forceSimulation(results_arr)
